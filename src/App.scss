@@ -1,0 +1,90 @@
+$borderRadius: 2px;
+$middleOrange: #f65515;
+$whiteColor: #fff;
+$biggerFontSize: 19px;
+$smallerFontSize: 17px;
+$blurBackground: rgba(255, 255, 255, 0.4);
+
+body, html {
+  height: 100%;
+}
+
+/*Search Bar */
+header {
+  background-image: linear-gradient(to right, #ff690f, #fd6510, #fc6112, #fa5d13, #f85914, #f65515, #f45116,
+          #f24d17, #f04818, #ee4419, #eb3f1a, #e93a1b);
+  display: flex !important;
+  flex-wrap: wrap;
+
+  div {
+    display: flex !important;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 93%;
+
+    input {
+      border-bottom-right-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+      background: $blurBackground;
+      font-weight: bold;
+      color: $whiteColor;
+    }
+
+    input::placeholder {
+      color: $whiteColor;
+      font-weight: bold;
+    }
+
+    input:focus {
+      color: black !important;
+      background-color: $whiteColor;
+      outline: none;
+      transform: scale(1, 1.2);
+      border-radius: $borderRadius;
+      font-weight: bold;
+      font-size: $biggerFontSize;
+      background-image: url("icons/movie-black.svg");
+      padding-left: 55px;
+      background-repeat: no-repeat;
+      background-size: 23px;
+      background-position: 20px;
+    }
+
+    input:focus::placeholder {
+      color: #a7a5a5;
+    }
+  }
+
+  button {
+    margin: 0 auto 0 -14px;
+    width: 4%;
+    border-radius: $borderRadius;
+    background-color: $whiteColor;
+  }
+}
+
+.movie-icon {
+  padding: 13px;
+  height: 56px;
+  background: $blurBackground;
+  border-bottom-left-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+}
+
+/* Autoselect */
+
+.autoContainer {
+  margin: -20px 89px 0 89px;
+  box-shadow: 1px 8px 9px -3px rgba(76, 76, 76, 0.54);
+  border-bottom-left-radius: $borderRadius;
+  border-bottom-right-radius: $borderRadius;
+}
+
+.option {
+  font-size: $biggerFontSize;
+  cursor: pointer;
+}
+
+.smallerFontSize {
+  font-size: $smallerFontSize;
+}
